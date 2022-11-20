@@ -1,6 +1,6 @@
-package org.jetbrains.plugins.template.services
+package com.github.sukieva.bcmhelper.services
 
-import org.jetbrains.plugins.template.MyBundle
+import com.github.sukieva.bcmhelper.MyBundle
 
 class MyApplicationService {
 
