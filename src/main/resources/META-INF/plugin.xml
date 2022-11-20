@@ -1,18 +1,20 @@
 <!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
     <id>com.github.sukieva.bcmhelper</id>
-    <name>IntelliJ Platform Plugin BCMHelper</name>
-    <vendor>sukieva</vendor>
+    <name>BCMHelper</name>
+    <vendor email="dev.suki@outlook.com">SukiEva</vendor>
 
     <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.modules.java</depends>
 
     <extensions defaultExtensionNs="com.intellij">
-        <applicationService serviceImplementation="com.github.sukieva.bcmhelper.services.MyApplicationService"/>
-        <projectService serviceImplementation="com.github.sukieva.bcmhelper.services.MyProjectService"/>
+        <notificationGroup id="BCM.NotificationGroup" displayType="BALLOON"/>
     </extensions>
 
-    <applicationListeners>
-        <listener class="com.github.sukieva.bcmhelper.listeners.MyProjectManagerListener"
-                  topic="com.intellij.openapi.project.ProjectManagerListener"/>
-    </applicationListeners>
+    <actions>
+        <group id="com.github.sukieva.bcmhelper" text="BCM助手">
+            <action id="ApiDocAction" class="com.github.sukieva.bcmhelper.action.ApiDocAction" text="ApiDoc"/>
+            <add-to-group group-id="ToolsMenu" anchor="last"/>
+        </group>
+    </actions>
 </idea-plugin>

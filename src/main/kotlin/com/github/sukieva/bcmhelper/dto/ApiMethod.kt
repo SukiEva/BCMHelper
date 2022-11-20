@@ -7,10 +7,11 @@ package com.github.sukieva.bcmhelper.dto
  * @date 2022/11/20
  */
 data class ApiMethod(
-    var description: String?, // 描述
-    var path: String, // 路径
-    var method: String, // 请求方法
-    var authority: String?, // 权限点
-    var params: List<MethodParam>, // 参数
-    var returnType: String // 返回值类型
+    var methodName: String?, // 方法名
+    var docComment: String?, // 注释
+    var methodParams: List<MethodParam>, // 参数
+    var returnType: String?, // 返回值类型
+    var requestPath: String?, // 路径
+    var requestMethod: String?, // 请求方法
+    var authority: String? // 权限点
 )

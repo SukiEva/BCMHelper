@@ -7,7 +7,8 @@ package com.github.sukieva.bcmhelper.dto
  * @date 2022/11/20
  */
 data class ApiClass(
-    var description: String?, // 接口信息
-    var path: String?, // 接口上下文根
-    var methods: List<ApiMethod> // 接口方法
+    var className: String?, // 类名
+    var docComment: String?, // 注释
+    var apiPath: String?, // 接口上下文根
+    var apiMethods: List<ApiMethod> // 接口方法
 )
